@@ -15,7 +15,9 @@ import * as Auth0 from 'auth0-web';
       <button mat-button (click)="signOut()" *ngIf="authenticated">Sign Out</button>
     </mat-toolbar>
     
-    <router-outlet></router-outlet>
+    <div class="view-container">
+      <router-outlet></router-outlet>
+    </div>
   `,
   styleUrls: ['./app.component.css']
 })

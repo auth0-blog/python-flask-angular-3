@@ -3,3 +3,9 @@
      Every toolbar row uses a flexbox row layout. */
   flex: 1 1 auto;
 }
+
+div.view-container {
+  padding: 15px;
+  margin: 0 auto;
+  max-width: 940px;
+}

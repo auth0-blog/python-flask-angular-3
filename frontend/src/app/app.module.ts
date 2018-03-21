@@ -1,4 +1,6 @@
-import {MatToolbarModule, MatButtonModule} from '@angular/material';
+import {
+  MatToolbarModule, MatButtonModule, MatCardModule
+} from '@angular/material';
 import * as Auth0 from 'auth0-web';
 import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
@@ -33,6 +35,7 @@ const appRoutes: Routes = [
     ),
     MatToolbarModule,
     MatButtonModule,
+    MatCardModule,
   ],
   providers: [ExamsApiService],
   bootstrap: [AppComponent]
