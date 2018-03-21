@@ -1,3 +1,4 @@
+import {MatToolbarModule, MatButtonModule} from '@angular/material';
 import * as Auth0 from 'auth0-web';
 import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
@@ -30,6 +31,8 @@ const appRoutes: Routes = [
     RouterModule.forRoot(
       appRoutes,
     ),
+    MatToolbarModule,
+    MatButtonModule,
   ],
   providers: [ExamsApiService],
   bootstrap: [AppComponent]
