@@ -18,8 +18,13 @@ export class ExamsApiService {
 
   // GET list of public, future events
   getExams(): Observable<Exam[]> {
+    const httpOptions = {
+      headers: new HttpHeaders({
+        'Authorization': `Bearer ${Auth0.getAccessToken()}`
+      })
+    };
     return this.http
-      .get(`${API_URL}/exams`)
+      .get(`${API_URL}/exams`, httpOptions)
       .catch(ExamsApiService._handleError);
   }
 
@@ -31,5 +36,15 @@ export class ExamsApiService {
     };
     return this.http
       .post(`${API_URL}/exams`, exam, httpOptions);
+  }
+
+  deleteExam(examId: number) {
+    const httpOptions = {
+      headers: new HttpHeaders({
+        'Authorization': `Bearer ${Auth0.getAccessToken()}`
+      })
+    };
+    return this.http
+      .delete(`${API_URL}/exams/${examId}`, httpOptions);
   }
 }
